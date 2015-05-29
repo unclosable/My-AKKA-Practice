@@ -1,6 +1,6 @@
-package My_AKKA_Practice.client;
+package My_AKKA_Practice.explore;
 
-import My_AKKA_Practice.client.Pi.Listener;
+import My_AKKA_Practice.explore.Pi.Listener;
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;

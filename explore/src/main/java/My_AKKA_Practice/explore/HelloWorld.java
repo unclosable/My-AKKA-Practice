@@ -1,4 +1,4 @@
-package My_AKKA_Practice.client;
+package My_AKKA_Practice.explore;
 
 import akka.actor.Props;  
 import akka.actor.UntypedActor;  

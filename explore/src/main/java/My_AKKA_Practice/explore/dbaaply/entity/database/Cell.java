@@ -1,10 +1,16 @@
-package My_AKKA_Practice.explore.dbaaply.entity;
+package My_AKKA_Practice.explore.dbaaply.entity.database;
 
+import My_AKKA_Practice.explore.dbaaply.entity.BasicDatabase;
 import My_AKKA_Practice.explore.dbaaply.enums.CellContentType;
 
-public class Cell {
+public class Cell extends BasicDatabase {
 	private CellContentType cellContentType;
 	private Object cellContent;
+
+	public Cell(CellContentType type, Object cellContent) {
+		this.cellContent = cellContent;
+		this.cellContentType = type;
+	}
 
 	public CellContentType getCellContentType() {
 		return cellContentType;

@@ -1,4 +1,4 @@
-package My_AKKA_Practice.explore.dbaaply.entity;
+package My_AKKA_Practice.explore.dbaaply.entity.database;
 
 import java.util.ArrayList;
 import java.util.List;

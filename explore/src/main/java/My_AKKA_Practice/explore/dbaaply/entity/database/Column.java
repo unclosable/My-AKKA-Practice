@@ -2,8 +2,6 @@ package My_AKKA_Practice.explore.dbaaply.entity.database;
 
 import java.util.List;
 
-import My_AKKA_Practice.explore.dbaaply.entity.BasicDatabase;
-
 public class Column extends BasicDatabase {
 	private String columnName;
 

@@ -1,6 +1,5 @@
 package My_AKKA_Practice.explore.dbaaply.entity.database;
 
-import My_AKKA_Practice.explore.dbaaply.entity.BasicDatabase;
 import My_AKKA_Practice.explore.dbaaply.enums.CellContentType;
 
 public class Cell extends BasicDatabase {

@@ -33,14 +33,32 @@ public class Table {
 		return feilds;
 	}
 
+	private String getQueryFeildsName(Feild feild) {
+		return tableName + "." + feild.getQueryStr();
+	}
+
 	public List<Feild> getFeildIterms() {
 		List<Feild> feilds = new ArrayList<Feild>();
 		feilds.addAll(this.feilds);
 		return feilds;
 	}
 
-	public FeildIterator getIterator(QueryFeildType feildType) {
+	private FeildIterator getIterator(QueryFeildType feildType) {
 		return new FeildIteratorImpl(feildType, this);
+	}
+
+	public String getQueryString(QueryFeildType feildType) {
+		FeildIterator iterator = getIterator(feildType);
+		String str = "";
+		boolean first = true;
+		while (iterator.hasNext()) {
+			Feild feild = iterator.next();
+			if (!first)
+				str += ",";
+			str += getQueryFeildsName(feild);
+			first &= false;
+		}
+		return str;
 	}
 
 	public String getTableName() {

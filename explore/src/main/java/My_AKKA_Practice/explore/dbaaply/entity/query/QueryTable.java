@@ -7,16 +7,16 @@ import My_AKKA_Practice.explore.dbaaply.Iterator.FeildIterator;
 import My_AKKA_Practice.explore.dbaaply.Iterator.impl.FeildIteratorImpl;
 import My_AKKA_Practice.explore.dbaaply.enums.QueryFeildType;
 
-public class Table {
+public class QueryTable {
 	private String tableName;
-	private List<Feild> feilds;
+	private List<QueryFeild> feilds;
 
-	public Table(String tableName) {
+	public QueryTable(String tableName) {
 		this.tableName = tableName;
-		this.feilds = new ArrayList<Feild>();
+		this.feilds = new ArrayList<QueryFeild>();
 	}
 
-	public void addFeild(Feild feild) {
+	public void addFeild(QueryFeild feild) {
 		this.feilds.add(feild);
 	}
 
@@ -27,18 +27,18 @@ public class Table {
 	public List<String> getFeildsString() {
 		List<String> feilds = new ArrayList<String>();
 		if (!this.feilds.isEmpty())
-			for (Feild feild : this.feilds) {
+			for (QueryFeild feild : this.feilds) {
 				feilds.add(tableName + "." + feild.getFeildName());
 			}
 		return feilds;
 	}
 
-	private String getQueryFeildsName(Feild feild) {
+	private String getQueryFeildsName(QueryFeild feild) {
 		return tableName + "." + feild.getQueryStr();
 	}
 
-	public List<Feild> getFeildIterms() {
-		List<Feild> feilds = new ArrayList<Feild>();
+	public List<QueryFeild> getFeildIterms() {
+		List<QueryFeild> feilds = new ArrayList<QueryFeild>();
 		feilds.addAll(this.feilds);
 		return feilds;
 	}
@@ -52,7 +52,7 @@ public class Table {
 		String str = "";
 		boolean first = true;
 		while (iterator.hasNext()) {
-			Feild feild = iterator.next();
+			QueryFeild feild = iterator.next();
 			if (!first)
 				str += ",";
 			str += getQueryFeildsName(feild);
@@ -69,11 +69,11 @@ public class Table {
 		this.tableName = tableName;
 	}
 
-	public List<Feild> getFeilds() {
+	public List<QueryFeild> getFeilds() {
 		return feilds;
 	}
 
-	public void setFeilds(List<Feild> feilds) {
+	public void setFeilds(List<QueryFeild> feilds) {
 		this.feilds = feilds;
 	}
 }

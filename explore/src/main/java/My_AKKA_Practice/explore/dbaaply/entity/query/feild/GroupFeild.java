@@ -1,9 +1,9 @@
 package My_AKKA_Practice.explore.dbaaply.entity.query.feild;
 
-import My_AKKA_Practice.explore.dbaaply.entity.query.Feild;
+import My_AKKA_Practice.explore.dbaaply.entity.query.QueryFeild;
 import My_AKKA_Practice.explore.dbaaply.enums.QueryFeildType;
 
-public class GroupFeild extends Feild {
+public class GroupFeild extends QueryFeild {
 	private int groupIndex;
 
 	public GroupFeild(String feildName, int groupIndex) {

@@ -1,9 +1,9 @@
 package My_AKKA_Practice.explore.dbaaply.entity.query.feild;
 
-import My_AKKA_Practice.explore.dbaaply.entity.query.Feild;
+import My_AKKA_Practice.explore.dbaaply.entity.query.QueryFeild;
 import My_AKKA_Practice.explore.dbaaply.enums.QueryFeildType;
 
-public class RemarkFeild extends Feild {
+public class RemarkFeild extends QueryFeild {
 
 	private String remark;
 
@@ -23,5 +23,10 @@ public class RemarkFeild extends Feild {
 	@Override
 	protected QueryFeildType initType() {
 		return QueryFeildType.REMARK;
+	}
+
+	@Override
+	public String getQueryStr() {
+		return super.getQueryStr() + "='" + remark + "' ";
 	}
 }

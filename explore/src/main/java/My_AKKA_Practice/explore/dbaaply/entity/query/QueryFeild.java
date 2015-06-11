@@ -2,11 +2,11 @@ package My_AKKA_Practice.explore.dbaaply.entity.query;
 
 import My_AKKA_Practice.explore.dbaaply.enums.QueryFeildType;
 
-public abstract class Feild {
+public abstract class QueryFeild {
 	private String feildName;
 	private QueryFeildType feildType;
 
-	public Feild(String feildName) {
+	public QueryFeild(String feildName) {
 		this.feildName = feildName;
 		this.feildType = initType();
 	}

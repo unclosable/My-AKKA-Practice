@@ -3,16 +3,16 @@ package My_AKKA_Practice.explore.dbaaply.Iterator.impl;
 import java.util.List;
 
 import My_AKKA_Practice.explore.dbaaply.Iterator.FeildIterator;
-import My_AKKA_Practice.explore.dbaaply.entity.query.Feild;
-import My_AKKA_Practice.explore.dbaaply.entity.query.Table;
+import My_AKKA_Practice.explore.dbaaply.entity.query.QueryFeild;
+import My_AKKA_Practice.explore.dbaaply.entity.query.QueryTable;
 import My_AKKA_Practice.explore.dbaaply.enums.QueryFeildType;
 
 public class FeildIteratorImpl implements FeildIterator {
 	private int index;
 	private QueryFeildType queryFeildType;
-	private Table table;
+	private QueryTable table;
 
-	public FeildIteratorImpl(QueryFeildType queryFeildType, Table table) {
+	public FeildIteratorImpl(QueryFeildType queryFeildType, QueryTable table) {
 		this.index = -1;
 		this.queryFeildType = queryFeildType;
 		this.table = table;
@@ -24,7 +24,7 @@ public class FeildIteratorImpl implements FeildIterator {
 	}
 
 	@Override
-	public Feild next() {
+	public QueryFeild next() {
 		this.index = findNextIdx();
 		if (this.index != -1)
 			return this.table.getFeildIterms().get(this.index);
@@ -32,7 +32,7 @@ public class FeildIteratorImpl implements FeildIterator {
 	}
 
 	private int findNextIdx() {
-		List<Feild> feilds = this.table.getFeildIterms();
+		List<QueryFeild> feilds = this.table.getFeildIterms();
 		boolean find = false;
 		int tempIdx = this.index;
 		while (!find) {

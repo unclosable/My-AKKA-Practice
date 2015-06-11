@@ -2,11 +2,11 @@ package My_AKKA_Practice.explore.dbaaply.entity.database;
 
 import java.util.List;
 
-public class Table<T extends BasicDatabase> extends BasicDatabase {
+public class Table extends BasicDatabase {
 	private String tableName;
 
-	public Table(List<T> children, String tableName) {
-		for (T child : children) {
+	public Table(List<BasicDatabase> children, String tableName) {
+		for (BasicDatabase child : children) {
 			this.add(child);
 		}
 		this.tableName = tableName;

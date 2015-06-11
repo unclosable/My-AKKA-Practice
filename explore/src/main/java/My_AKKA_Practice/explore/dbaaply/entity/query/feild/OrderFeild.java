@@ -1,10 +1,10 @@
 package My_AKKA_Practice.explore.dbaaply.entity.query.feild;
 
-import My_AKKA_Practice.explore.dbaaply.entity.query.Feild;
+import My_AKKA_Practice.explore.dbaaply.entity.query.QueryFeild;
 import My_AKKA_Practice.explore.dbaaply.enums.OrderType;
 import My_AKKA_Practice.explore.dbaaply.enums.QueryFeildType;
 
-public class OrderFeild extends Feild {
+public class OrderFeild extends QueryFeild {
 
 	private OrderType orderType; // 排序的类型，正序or倒序
 	private int orderIndex;// 排序的先后顺序

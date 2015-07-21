@@ -3,7 +3,12 @@ package My_AKKA_Practice.explore.dbaaply.util;
 import My_AKKA_Practice.explore.dbaaply.entity.query.QueryCondition;
 
 public class SQLStrMaker {
-
+	/**
+	 * TODO 拼接查询语句 简单版
+	 * 
+	 * @param condition
+	 * @return
+	 */
 	public static String getSingleTableSelectSQL(QueryCondition condition) {
 		StringBuilder sql = new StringBuilder("select ");
 		sql.append(condition.getSelectFeildStr());

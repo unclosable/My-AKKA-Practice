@@ -38,6 +38,13 @@ public class DataBaseOperationImpl extends BasicDB implements DataBaseOperation 
 		return null;
 	}
 
+	/**
+	 * TODO 把 ResultSet 查询结果封装为 Table 并返回
+	 * 
+	 * @param rs
+	 * @return
+	 * @throws SQLException
+	 */
 	private Table packagingToRowTable(ResultSet rs) throws SQLException {
 		ResultSetMetaData rsmd = rs.getMetaData();
 		int columns = rsmd.getColumnCount();
@@ -45,7 +52,6 @@ public class DataBaseOperationImpl extends BasicDB implements DataBaseOperation 
 			rsmd.getColumnName(i);
 			rsmd.getColumnClassName(i);
 		}
-
 		return null;
 	}
 

@@ -1,4 +1,4 @@
-package My_AKKA_Practice.funtest;
+package My_AKKA_Practice.funtest.funtestone;
 
 public class Client {
 

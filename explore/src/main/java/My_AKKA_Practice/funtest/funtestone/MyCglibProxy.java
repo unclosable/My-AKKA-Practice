@@ -1,4 +1,4 @@
-package My_AKKA_Practice.funtest;
+package My_AKKA_Practice.funtest.funtestone;
 
 import java.lang.reflect.Method;
 
@@ -31,12 +31,13 @@ public class MyCglibProxy implements MethodInterceptor {
 	@Override
 	public Object intercept(Object object, Method method, Object[] args,
 			MethodProxy methodProxy) throws Throwable {
+		System.out.println("代理类：" + name);
 		System.out.println("调用的方法是：" + method.getName());
 		// 用户进行判断
-		if (!"张三".equals(name)) {
-			System.out.println("你没有权限！");
-			return null;
-		}
+		// if (!"张三".equals(name)) {
+		// System.out.println("你没有权限！");
+		// return null;
+		// }
 		Object result = methodProxy.invokeSuper(object, args);
 
 		return result;

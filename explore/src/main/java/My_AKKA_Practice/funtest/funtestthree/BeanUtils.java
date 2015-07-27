@@ -48,7 +48,6 @@ public class BeanUtils {
 		BeanMap targetMap = BeanMap.create(target);
 		Set<Object> targetKeySet = targetMap.keySet();
 		for (Object key : targetKeySet) {
-			System.out.println(key);
 			Object sourceObj = sourceMap.getOrDefault(key, null);
 			if (sourceObj == null)
 				continue;

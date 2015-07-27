@@ -41,6 +41,7 @@ public class Mytest {
 			System.out.println("属性名：" + key);
 			System.out
 					.println("属性类型：" + beanMap.getPropertyType(key).getName());
+			// beanMap.getOrDefault(key, null);
 			// beanMap.put("name", "dsacds");
 		}
 		Enhancer enhancer = new Enhancer();

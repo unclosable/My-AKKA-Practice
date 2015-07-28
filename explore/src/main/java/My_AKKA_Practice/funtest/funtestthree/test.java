@@ -26,7 +26,7 @@ public class test {
 		// Integer a = 9;
 		// Integer b = 1;
 		// BeanUtil.copyProperties(room1, room2);
-		BeanUtils.cloneObject(room1, room2);
+		BeanUtils.cloneObjectWithOutReferenceRelationship(room1, room2);
 
 		room1.getRoomPerson().setName("小明进化");
 

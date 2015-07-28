@@ -4,10 +4,15 @@ import java.util.List;
 import java.util.Map;
 
 public class BigRoom2 {
+	private final int id = 1;
 	private String roomName;
 	private List<Student> roomPersons;
 	private Student[] roomPersonss;
 	private Map<String, Student> stuMap;
+
+	public int getId() {
+		return id;
+	}
 
 	public Student[] getRoomPersonss() {
 		return roomPersonss;

@@ -29,8 +29,7 @@ public class MyCglibProxy implements MethodInterceptor {
 	}
 
 	@Override
-	public Object intercept(Object object, Method method, Object[] args,
-			MethodProxy methodProxy) throws Throwable {
+	public Object intercept(Object object, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
 		System.out.println("代理类：" + name);
 		System.out.println("调用的方法是：" + method.getName());
 		// 用户进行判断
